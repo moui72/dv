@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body id="body">
+    <script src="scripts/main.js" async defer></script>
+    <p id="loading">Loading...</p>
+    <main id="app" hidden>
+        <nav hidden id="browserWrapper">
+            <button id="hideArchive" onclick="app.hideBrowse()">Close breeds browser</button>
+
+            <ul id="breedBrowser">
+            </ul>
+        </nav>
+        <section>
+            <h1>Lookit this Doggo!</h1>
+            <p>by Tyler Peckenpaugh</p>
+            <p>2020-11-22</p>
+            <figure id="mainDisplay">
+            </figure>
+        </section>
+        <nav>
+            <button id="showDog" onclick="app.newDog()">Show me another cute shiba!</button>
+            <button id="history" onclick="app.showHistory()">Show me my history for this breed</button>
+            <button id="browseBreeds" onclick="app.showBrowse()">Browse breeds</button>
+            <div>
+                <label for="pickBreed">Select a different breed</label>
+                <select id="pickBreed" onchange="app.setActiveBreed(this.value)">
+                </select>
+            </div>
+        </nav>
+        <section id="archiveWrapper" hidden>
+            <article id="archive"></article>
+            <button id="hideArchive" onclick="app.hideHistory()">Close history</button>
+        </section>
+    </main>
+</body>
+
+</html>
